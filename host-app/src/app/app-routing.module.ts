@@ -12,6 +12,16 @@ const routes: Routes = [
             exposedModule: './Module'
         })
         .then(m => m.ProductsModule)
+  },
+  {
+    path: 'carts',
+    loadChildren: () =>
+         loadRemoteModule({
+            type: 'module',
+            remoteEntry: 'http://localhost:4202/remoteEntry.js',
+            exposedModule: './CartsModule'
+        })
+        .then(m => m.CartsModule)
   }
 ];
 
