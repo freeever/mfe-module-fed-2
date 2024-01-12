@@ -1,5 +1,5 @@
 
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const { withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 
 module.exports = withModuleFederationPlugin({
 
@@ -7,7 +7,7 @@ module.exports = withModuleFederationPlugin({
   filename: "remoteEntry.js",
 
   exposes: {
-    './Module': './src/app/views/products/products.module',
+    './ProductsModule': './src/app/views/products/products.module',
   },
   
   shared: {
