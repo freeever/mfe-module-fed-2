@@ -1,0 +1,9 @@
+{
+    "host.layout.nav.logo": "MFE Demo",
+    "host.layout.nav.home": "Home",
+    "host.layout.nav.products": "Products",
+    "host.layout.nav.carts": "My Carts",
+
+    "host.layout.nav.lang.en": "EN",
+    "host.layout.nav.lang.fr": "FR"
+}

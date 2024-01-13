@@ -1,11 +1,14 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-import { CommonModule } from '@angular/common';
+import { MfeSharedLibModule } from './../../../mfe-shared/projects/mfe-shared-lib/src/lib/mfe-shared-lib.module';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,22 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MfeSharedLibModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+

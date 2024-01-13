@@ -1,23 +1,35 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['/']">MFE Demo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="['/']">Home
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/products']">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/carts']">Carts</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">{{ 'host.layout.nav.logo' | translate }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/']">{{ 'host.layout.nav.home' | translate }}
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products']">{{ 'host.layout.nav.products' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/carts']">{{ 'host.layout.nav.carts' | translate }}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto"> <!-- Note the use of ms-auto for right alignment -->
+        <li class="nav-item">
+          <a *ngIf="isNotLang('en')" class="nav-link" href="#" (click)="switchLanguage('en')">
+            {{ 'host.layout.nav.lang.en' | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isNotLang('fr')" class="nav-link" href="#" (click)="switchLanguage('fr')">
+            {{ 'host.layout.nav.lang.fr' | translate }}
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
