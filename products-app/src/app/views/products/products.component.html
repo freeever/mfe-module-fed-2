@@ -1,6 +1,6 @@
 <div class="row m-2">
   <div class="col-md-6 mt-2">
-    <input type="text" class="form-control border-success" placeholder="Search">
+    <input type="text" class="form-control border-success" placeholder="{{ 'products.list.search' | translate}}">
   </div>
 </div>
 
@@ -16,10 +16,12 @@
       <div class="card-footer">
         <div class="row">
           <div class="col-md-6">
-            <p><b>Price: {{ product.price | currency: 'CAD' }}</b></p>
+            <p><b>{{ 'products.list.btn.add.to.Cart' | translate }} {{ product.price | currency: 'CAD' }}</b></p>
           </div>
           <div class="col-md-6">
-            <button class="btn btn-sm btn-warning float-end">Add to Cart</button>
+            <button class="btn btn-sm btn-warning float-end">
+              {{ 'products.list.btn.add.to.Cart' | translate }}
+            </button>
           </div>
         </div>
       </div>

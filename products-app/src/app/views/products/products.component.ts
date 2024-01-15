@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
     this.productService.getProducts().pipe(
       takeUntilDestroyed(this.destroyRef)
     ).subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.products = res;
     });
   }
