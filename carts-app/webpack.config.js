@@ -14,7 +14,9 @@ module.exports = withModuleFederationPlugin({
     "@angular/core": { singleton: true, strictVersion: false, requiredVersion: "auto" },
     "@angular/common": { singleton: true, strictVersion: false, requiredVersion: "auto" },
     "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: "auto" },
-    "@angular/router": { singleton: true, strictVersion: false, requiredVersion: "auto" }
+    "@angular/router": { singleton: true, strictVersion: false, requiredVersion: "auto" },
+    "@ngx-translate/core": { singleton: true, strictVersion: true, requiredVersion: "15.0.0" },
+    "@ngx-translate/http-loader": { singleton: true, strictVersion: true, requiredVersion: "8.0.0" }
   }
 });
 
