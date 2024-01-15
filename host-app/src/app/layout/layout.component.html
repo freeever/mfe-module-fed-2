@@ -20,14 +20,14 @@
       </ul>
       <ul class="navbar-nav ms-auto"> <!-- Note the use of ms-auto for right alignment -->
         <li class="nav-item">
-          <a *ngIf="isNotLang('en')" class="nav-link" href="#" (click)="switchLanguage('en')">
+          <button *ngIf="showLangSwitchFor('en')" type="button" (click)="switchLanguage('en')" class="btn btn-primary btn-lg">
             {{ 'host.layout.nav.lang.en' | translate }}
-          </a>
+          </button>
         </li>
         <li class="nav-item">
-          <a *ngIf="isNotLang('fr')" class="nav-link" href="#" (click)="switchLanguage('fr')">
+          <button *ngIf="showLangSwitchFor('fr')" type="button" (click)="switchLanguage('fr')" class="btn btn-primary btn-lg">
             {{ 'host.layout.nav.lang.fr' | translate }}
-          </a>
+          </button>
         </li>
       </ul>
     </div>

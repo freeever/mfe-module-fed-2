@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MfeSharedLibModule } from './../../../mfe-shared/projects/mfe-shared-lib/src/lib/mfe-shared-lib.module';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CustomTranslateLoader } from './shared/custom-translate-loader';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new CustomTranslateLoader(http, [
+    'http://localhost:4200/assets/i18n',
+    'http://localhost:4201/assets/i18n',
+    'http://localhost:4202/assets/i18n'
+  ]);
 }
 

@@ -15,7 +15,7 @@ export class LayoutComponent {
     this.languageService.setLanguage(language);
   }
 
-  isNotLang(lang: string): boolean {
+  showLangSwitchFor(lang: string): boolean {
     return this.translateService.currentLang !== lang;
   }
 }
