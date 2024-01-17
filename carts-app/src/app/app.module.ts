@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MfeSharedLibModule } from './../../../mfe-shared/projects/mfe-shared-lib/src/lib/mfe-shared-lib.module';
 import { SharedModule } from './shared/shared.module';
+import { NavModule } from './nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SharedModule } from './shared/shared.module';
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
+    NavModule,
     SharedModule,
     MfeSharedLibModule,
     TranslateModule.forRoot({

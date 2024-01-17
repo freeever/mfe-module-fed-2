@@ -1,4 +1,9 @@
 {
+    "carts.nav.logo.text": "Carts",
+    "carts.nav.shopping.cart": "Shopping Cart",
+    "carts.nav.lang.en": "EN",
+    "carts.nav.lang.fr": "FR",
+
     "carts.shopping.cart": "Shopping Cart",
     "carts.shopping.items": "items",
     "carts.shopping.summary": "Summary",
