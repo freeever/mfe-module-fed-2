@@ -13,12 +13,12 @@ In this POC, each application has its own dependencies, however, the styles cann
 
 # Shared library
 ## Use the shared library locally
-> cd mfe-shared
-> ng build mfe-shared-lib
-> cd dist/mfe-shared-lib
+> cd mfe-shared  
+> ng build mfe-shared-lib  
+> cd dist/mfe-shared-lib  
 > npm link
 
-> cd host-app
+> cd host-app  
 > npm link mfe-shared-lib
 
 Do the same for products-app and carts-app as well
