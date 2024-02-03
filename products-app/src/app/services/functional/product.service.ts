@@ -2,9 +2,7 @@ import { Observable } from 'rxjs';
 import { NetworkRequestService } from './../core/network-request.service';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProductService {
 
   constructor(private networkRequestService: NetworkRequestService) { }

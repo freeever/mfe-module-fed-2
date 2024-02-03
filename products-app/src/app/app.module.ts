@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MfeSharedLibModule } from './../../../mfe-shared/projects/mfe-shared-lib/src/lib/mfe-shared-lib.module';
 import { SharedModule } from './shared/shared.module';
 import { NavModule } from './nav/nav.module';
+import { ProductsModule } from './views/products/products.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavModule } from './nav/nav.module';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
