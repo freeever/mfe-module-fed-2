@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NetworkRequestService {
 
-  baseUrl = 'https://fakestoreapi.com/';
+  baseUrl = '/api/';
 
   constructor(private http: HttpClient) { }
 
