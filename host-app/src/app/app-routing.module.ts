@@ -9,9 +9,9 @@ const routes: Routes = [
          loadRemoteModule({
             type: 'module',
             remoteEntry: 'http://localhost:4201/remoteEntry.js',
-            exposedModule: './ProductsModule'
+            exposedModule: './Module'
         })
-        .then(m => m.ProductsModule)
+        .then(m => m.AppModule)
   },
   {
     path: 'carts',

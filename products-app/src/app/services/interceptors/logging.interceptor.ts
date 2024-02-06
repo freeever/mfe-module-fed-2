@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 })
 export class LoggingInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('Making request to:', req.url);
+    console.log('Interceptor - Logging - Making request to:', req.url);
     return next.handle(req);
   }
 }
